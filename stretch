@@ -1,0 +1,6 @@
+FROM debian:stretch
+
+# docker build --compress -t ulwanski/deb:stretch -f deb-stretch .
+MAINTAINER Marek Ulwański <marek@ulwanski.pl>
+
+RUN apt update && apt upgrade -y && apt install build-essential devscripts debhelper lintian -y
